@@ -149,15 +149,17 @@ p{max-width:64ch}
 .hero-nota{font-size:.9rem;color:var(--cinza);font-weight:500}
 .hero-nota b{color:var(--tinta);font-weight:700}
 
-.hero-visual{position:relative;display:flex;justify-content:center}
+.hero-visual{position:relative;display:flex;flex-direction:column;align-items:center}
 .selo-offline{
-  position:absolute;top:14px;right:-6px;z-index:5;background:var(--marinho);color:#fff;
-  border-radius:var(--raio-m);padding:15px 19px;display:flex;gap:13px;align-items:flex-start;
-  max-width:250px;box-shadow:var(--sombra-forte);
+  background:var(--marinho);color:#fff;margin:0 0 22px;
+  display:inline-flex;align-items:center;gap:11px;
+  padding:10px 20px 10px 15px;border-radius:100px;
+  box-shadow:0 14px 30px -14px rgba(10,34,89,.7);
 }
-.selo-offline svg{width:19px;height:19px;stroke:#7FE3B8;fill:none;stroke-width:2.2;flex-shrink:0;margin-top:3px}
-.selo-offline strong{display:block;font-size:.7rem;letter-spacing:.11em;color:#7FE3B8;text-transform:uppercase;margin-bottom:3px}
-.selo-offline p{font-size:.83rem;line-height:1.45;color:#D5E1F7;font-weight:500}
+.selo-offline svg{width:17px;height:17px;stroke:#7FE3B8;fill:none;stroke-width:2.2;flex-shrink:0}
+.selo-offline div{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;justify-content:center}
+.selo-offline strong{font-size:.66rem;letter-spacing:.11em;color:#7FE3B8;text-transform:uppercase}
+.selo-offline p{font-size:.85rem;line-height:1.3;color:#D5E1F7;font-weight:500}
 
 /* ============ CELULAR (mockups) ============ */
 .fone{
@@ -422,17 +424,6 @@ p{max-width:64ch}
 @media (max-width:1000px){
   .hero-int{grid-template-columns:1fr;gap:48px;padding:52px 24px 72px}
   .hero .chamada{max-width:52ch}
-  .hero-visual{flex-direction:column;align-items:center}
-  .selo-offline{
-    position:static;width:auto;max-width:none;margin:0 0 20px;
-    display:inline-flex;align-items:center;gap:10px;
-    padding:9px 17px 9px 13px;border-radius:100px;
-    box-shadow:0 12px 26px -14px rgba(10,34,89,.7);
-  }
-  .selo-offline svg{width:15px;height:15px;margin-top:0}
-  .selo-offline div{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
-  .selo-offline strong{margin-bottom:0;font-size:.63rem;letter-spacing:.1em}
-  .selo-offline p{font-size:.78rem;line-height:1.3}
   .provas-int{grid-template-columns:1fr 1fr}
   .prova:nth-child(2){border-right:0}
   .prova:nth-child(1),.prova:nth-child(2){border-bottom:1px solid var(--linha)}
@@ -488,7 +479,7 @@ p{max-width:64ch}
     <button class="abre-menu" id="abreMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
       <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
-    <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" class="bt bt-principal">Testar 30 dias grátis</a>
+    <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" class="bt bt-principal">30 dias gratuito</a>
   </div>
 </header>
 
@@ -499,7 +490,7 @@ p{max-width:64ch}
       <h1>Sua rotina de corretor,<br><span class="grifo">sem bagunça.</span></h1>
       <p class="chamada">Imóveis, proprietários, agenda e financeiro num painel só — no seu celular, funcionando mesmo sem internet.</p>
       <div class="hero-acoes">
-        <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" class="bt bt-principal">Testar 30 dias grátis</a>
+        <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" class="bt bt-principal">30 dias gratuito</a>
         <a href="#recursos" class="bt bt-vazado">Ver como funciona</a>
       </div>
       <p class="hero-nota"><b>Sem cartão de crédito.</b> Instala direto do navegador, como um aplicativo.</p>
@@ -998,7 +989,7 @@ p{max-width:64ch}
     <h2>Comece hoje a próxima visita organizado.</h2>
     <p>Instala em dois minutos, funciona sem internet e não pede cartão. Se não servir para você, é só desinstalar.</p>
     <div class="cta-acoes">
-      <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" class="bt bt-claro">Testar 30 dias grátis</a>
+      <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" class="bt bt-claro">30 dias gratuito</a>
       <a href="https://wa.me/5515998293087?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20app%20Corretor%20de%20Im%C3%B3veis." target="_blank" rel="noopener" class="bt bt-zap">
         <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" style="stroke:#fff"><path d="M21 11.5a8 8 0 0 1-11.9 7L3 20.5l2.1-6A8 8 0 1 1 21 11.5z"/></svg>
         Falar com a gente
