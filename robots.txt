@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://corsyncimoveis.com.br/sitemap.xml
