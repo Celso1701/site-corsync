@@ -3,28 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Corretor de Imóveis — o app do corretor autônomo. Funciona offline.</title>
-<meta name="description" content="Imóveis, proprietários, agenda e financeiro num painel só. Funciona offline, seus dados ficam no seu celular e não tem mensalidade obrigatória. Feito para o corretor autônomo.">
+<title>Cor Sync Imóveis — o app do corretor autônomo. Funciona offline.</title>
+<meta name="description" content="Imóveis, clientes compradores, agenda e financeiro num painel só, com catálogo em PDF, simulador de financiamento e metas. Funciona offline e os dados ficam no seu celular. Feito para o corretor autônomo.">
 <meta name="theme-color" content="#1D4ED8">
 <link rel="canonical" href="https://corsyncimoveis.com.br/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://corsyncimoveis.com.br/">
-<meta property="og:site_name" content="Corretor de Imóveis">
-<meta property="og:title" content="Corretor de Imóveis — o app do corretor autônomo">
+<meta property="og:site_name" content="Cor Sync Imóveis">
+<meta property="og:title" content="Cor Sync Imóveis — o app do corretor autônomo">
 <meta property="og:description" content="Imóveis, proprietários, agenda e financeiro num painel só. Funciona offline e os dados ficam no seu celular.">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"SoftwareApplication",
-  "name":"Corretor de Imóveis",
+  "name":"Cor Sync Imóveis",
   "url":"https://corsyncimoveis.com.br/",
   "applicationCategory":"BusinessApplication",
   "operatingSystem":"Android, iOS, Windows — funciona no navegador",
   "inLanguage":"pt-BR",
-  "description":"Aplicativo para corretor de imóveis autônomo. Cadastro de imóveis, proprietários, agenda de visitas e financeiro num painel só. Funciona offline e os dados ficam gravados no próprio celular.",
+  "description":"Aplicativo para corretor de imóveis autônomo. Cadastro de imóveis, proprietários, clientes compradores com busca cruzada, agenda de visitas, financeiro, catálogo em PDF, simulador de financiamento e metas de venda. Funciona offline e os dados ficam gravados no próprio celular.",
   "offers":[
     {"@type":"Offer","name":"Gratuito","price":"0","priceCurrency":"BRL","description":"30 dias com todas as funções liberadas, sem cartão de crédito."},
     {"@type":"Offer","name":"Pro","price":"90.00","priceCurrency":"BRL","description":"Plano mensal com todas as funções, sem fidelidade."}
@@ -266,6 +266,34 @@ p{max-width:64ch}
   padding:10px;font-size:.73rem;font-weight:800;margin-top:9px;
 }
 
+/* ferramentas (home) */
+.ap-fer{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:15px}
+.ap-fer div{
+  background:#fff;border-radius:11px;padding:9px 4px;text-align:center;
+  font-size:.53rem;font-weight:700;color:var(--tinta-2);line-height:1.25;
+  box-shadow:0 3px 9px -5px rgba(15,27,51,.2);
+}
+.ap-fer span{display:block;font-size:.95rem;margin-bottom:4px}
+
+/* consulta ideal */
+.ap-crit{background:#fff;border-radius:12px;padding:11px;margin-bottom:10px;box-shadow:0 3px 10px -5px rgba(15,27,51,.2)}
+.ap-crit b{font-size:.72rem;display:block;margin-bottom:8px}
+.ap-chips{display:flex;flex-wrap:wrap;gap:5px}
+.ap-chips i{
+  font-style:normal;font-size:.57rem;font-weight:700;padding:4px 9px;
+  border-radius:100px;background:var(--gelo);color:var(--azul);
+}
+.ap-match{
+  display:flex;align-items:center;gap:9px;background:#fff;border-radius:12px;
+  padding:10px 11px;margin-bottom:7px;box-shadow:0 3px 9px -5px rgba(15,27,51,.2);
+  border-left:3px solid var(--verde);
+}
+.ap-match b{display:block;font-size:.72rem}
+.ap-match small{font-size:.6rem;color:var(--cinza);font-weight:500}
+.ap-pct{margin-left:auto;font-size:.66rem;font-weight:800;color:var(--verde)}
+.ap-funil{display:flex;gap:4px;margin-top:4px}
+.ap-funil i{font-style:normal;font-size:.5rem;font-weight:800;padding:3px 7px;border-radius:100px;color:#fff}
+
 /* ============ FAIXA DE PROVAS ============ */
 .provas{border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);background:#fff}
 .provas-int{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
@@ -467,7 +495,7 @@ p{max-width:64ch}
       <span class="marca-icone" aria-hidden="true">
         <svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg>
       </span>
-      Corretor <span>de Imóveis</span>
+      Cor Sync <span>Imóveis</span>
     </a>
     <nav class="menu" id="menu">
       <a href="#recursos">Recursos</a>
@@ -479,7 +507,7 @@ p{max-width:64ch}
     <button class="abre-menu" id="abreMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
       <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
-    <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" class="bt bt-principal">30 dias gratuito</a>
+    <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" data-gc-event="cta-30dias-topo" data-gc-title="Clique: 30 dias gratuito (topo)" class="bt bt-principal">30 dias gratuito</a>
   </div>
 </header>
 
@@ -490,7 +518,7 @@ p{max-width:64ch}
       <h1>Sua rotina de corretor,<br><span class="grifo">sem bagunça.</span></h1>
       <p class="chamada">Imóveis, proprietários, agenda e financeiro num painel só — no seu celular, funcionando mesmo sem internet.</p>
       <div class="hero-acoes">
-        <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" class="bt bt-principal">30 dias gratuito</a>
+        <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" data-gc-event="cta-30dias-hero" data-gc-title="Clique: 30 dias gratuito (topo da pagina)" class="bt bt-principal">30 dias gratuito</a>
         <a href="#recursos" class="bt bt-vazado">Ver como funciona</a>
       </div>
       <p class="hero-nota"><b>Sem cartão de crédito.</b> Instala direto do navegador, como um aplicativo.</p>
@@ -539,6 +567,13 @@ p{max-width:64ch}
                 <span class="ap-cel-ic ic-verde"><svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2.5"/><circle cx="12" cy="12" r="2.6"/></svg></span>
                 <b>Financeiro</b><small>Ver resumo</small>
               </div>
+            </div>
+            <p class="ap-tit">Ferramentas</p>
+            <div class="ap-fer">
+              <div><span>🎯</span>Consulta<br>ideal</div>
+              <div><span>📚</span>Catálogo<br>PDF</div>
+              <div><span>🧮</span>Simular<br>parcela</div>
+              <div><span>📈</span>Metas<br>e KPIs</div>
             </div>
             <p class="ap-tit">Financeiro em aberto</p>
             <div class="ap-linha">
@@ -610,13 +645,13 @@ p{max-width:64ch}
         </ul>
       </div>
       <div class="comp-cart dela">
-        <h3>Corretor de Imóveis</h3>
+        <h3>Cor Sync Imóveis</h3>
         <p class="sub">O app do corretor autônomo</p>
         <ul class="comp-lista">
           <li><svg viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></svg>Cadastra o imóvel na visita, sem sinal nenhum</li>
           <li><svg viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></svg>Você ativa quando quiser: 1, 6 ou 12 meses</li>
           <li><svg viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></svg>Tudo gravado no aparelho, com backup na sua mão</li>
-          <li><svg viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></svg>Cinco telas: início, imóveis, agenda, proprietários, financeiro</li>
+          <li><svg viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></svg>Só o que o corretor usa: imóveis, clientes, agenda e financeiro</li>
           <li><svg viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></svg>Abriu, usou. Sem treinamento e sem fidelidade</li>
         </ul>
       </div>
@@ -629,8 +664,8 @@ p{max-width:64ch}
   <div class="env">
     <div class="secao-topo">
       <span class="olho">O que tem dentro</span>
-      <h2>Cinco telas que dão conta do dia inteiro.</h2>
-      <p class="chamada">Nada de módulo escondido. Tudo que o corretor autônomo faz do café da manhã ao fechamento da proposta.</p>
+      <h2>Do primeiro contato ao negócio fechado, sem sair do app.</h2>
+      <p class="chamada">Imóveis, agenda, clientes compradores e financeiro — mais as ferramentas que antes exigiam calculadora, planilha e outro aplicativo.</p>
     </div>
 
     <!-- IMÓVEIS -->
@@ -761,8 +796,78 @@ p{max-width:64ch}
       </div>
     </div>
 
-    <!-- FINANCEIRO -->
+    <!-- CLIENTES / CONSULTA IDEAL -->
     <div class="fun">
+      <div class="fun-txt">
+        <h2>Ele disse o que procura. O app acha na sua carteira.</h2>
+        <p class="chamada">Você guarda o que cada comprador quer — tipo, cidade, quartos e quanto pode investir — e a Consulta ideal cruza isso com os imóveis que você já tem cadastrados.</p>
+        <ul class="fun-lista">
+          <li>
+            <span class="fun-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+            <div><b>Busca cruzada na hora</b><span>Fala com o cliente no telefone e já responde quais imóveis servem para ele, sem abrir um por um.</span></div>
+          </li>
+          <li>
+            <span class="fun-ic"><svg viewBox="0 0 24 24"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg></span>
+            <div><b>Funil de cinco estágios</b><span>Novo, Qualificado, Visitou, Proposta e Fechado — cada cliente com sua cor, para você ver onde cada negociação parou.</span></div>
+          </li>
+          <li>
+            <span class="fun-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
+            <div><b>Compradores vindos das visitas</b><span>Quem você atendeu numa visita já entra na lista de clientes. Nada de perder o contato depois.</span></div>
+          </li>
+          <li>
+            <span class="fun-ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8 8 0 0 1-11.9 7L3 20.5l2.1-6A8 8 0 1 1 21 11.5z"/></svg></span>
+            <div><b>Follow-up com data marcada</b><span>Agenda o retorno de cada cliente e o app lembra você no dia. Ninguém esfria por esquecimento.</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="fun-img">
+        <!-- TELA: CONSULTA IDEAL -->
+        <div class="fone fone-p">
+          <div class="fone-tela">
+            <span class="entalhe" aria-hidden="true"></span>
+            <div class="ap-topo">
+              <span class="ap-olho">Consulta ideal</span>
+              <div class="ap-ola"><b>Juliana Ferreira</b></div>
+            </div>
+            <div class="ap-corpo">
+              <div class="ap-crit">
+                <b>O que ela procura</b>
+                <div class="ap-chips">
+                  <i>Casa</i><i>Sorocaba</i><i>3+ quartos</i><i>até R$ 480 mil</i>
+                </div>
+                <div class="ap-funil">
+                  <i style="background:#F59E0B">Visitou</i>
+                </div>
+              </div>
+              <p class="ap-tit">3 imóveis combinam</p>
+              <div class="ap-match">
+                <div><b>CA-0121 · Jd. das Flores</b><small>3 quartos · R$ 450.000</small></div>
+                <span class="ap-pct">98%</span>
+              </div>
+              <div class="ap-match">
+                <div><b>CA-0077 · Vila Nova</b><small>3 quartos · R$ 465.000</small></div>
+                <span class="ap-pct">94%</span>
+              </div>
+              <div class="ap-match">
+                <div><b>CA-0203 · Centro</b><small>4 quartos · R$ 479.000</small></div>
+                <span class="ap-pct">89%</span>
+              </div>
+              <div class="ap-bt">Enviar os 3 no WhatsApp</div>
+            </div>
+            <div class="ap-barra">
+              <div class="on"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/></svg>Início</div>
+              <div><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M8 8h8M8 12h8"/></svg>Imóveis</div>
+              <div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M8 3v4M16 3v4"/></svg>Agenda</div>
+              <div><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg>Donos</div>
+              <div><svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2.5"/><circle cx="12" cy="12" r="2.6"/></svg>R$</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINANCEIRO -->
+    <div class="fun fun-inverso">
       <div class="fun-txt">
         <h2>Você sabe quanto entrou. E quanto ainda não entrou.</h2>
         <p class="chamada">Comissões, despesas de captação, propostas em andamento. O que está vencido aparece na tela inicial antes de você procurar.</p>
@@ -831,6 +936,49 @@ p{max-width:64ch}
 <section class="secao secao-gelo">
   <div class="env">
     <div class="secao-topo">
+      <span class="olho olho-azul">Ferramentas</span>
+      <h2>O que antes exigia outro aplicativo, agora está aqui dentro.</h2>
+      <p class="chamada">Cinco ferramentas na tela inicial, ao lado do acesso rápido — todas usando os imóveis que você já cadastrou.</p>
+    </div>
+    <div class="grade">
+      <div class="cart">
+        <span class="cart-ic"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5"/></svg></span>
+        <h3>Catálogo em PDF</h3>
+        <p>Marque vários imóveis e o app monta uma vitrine em PDF, com fotos e valores, pronta para mandar no WhatsApp ou por e-mail. Um envio só, em vez de dez.</p>
+      </div>
+      <div class="cart">
+        <span class="cart-ic"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span>
+        <h3>Ficha do imóvel</h3>
+        <p>Gera a ficha completa de um imóvel em página pronta para imprimir ou salvar em PDF — com características, garagem, segurança, água e energia.</p>
+      </div>
+      <div class="cart">
+        <span class="cart-ic"><svg viewBox="0 0 24 24"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M16 15h0M8 19h6"/></svg></span>
+        <h3>Simulador de financiamento</h3>
+        <p>Calcula a parcela pela tabela PRICE ou SAC, com entrada, juros e prazo. Mostra o total pago e quanto é de juros — o cliente decide ali, na sua frente.</p>
+      </div>
+      <div class="cart">
+        <span class="cart-ic"><svg viewBox="0 0 24 24"><path d="M15.5 3.5h3.5A1.5 1.5 0 0 1 20.5 5v3.5"/><path d="M20 4.5 13 11.5"/><path d="M20 14v5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19V6a1.5 1.5 0 0 1 1.5-1.5H10"/></svg></span>
+        <h3>Follow-up de retornos</h3>
+        <p>Marque a data de voltar a falar com cada cliente. O app avisa no dia — inclusive com o app fechado, quando você abrir.</p>
+      </div>
+      <div class="cart">
+        <span class="cart-ic"><svg viewBox="0 0 24 24"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg></span>
+        <h3>Produtividade e metas</h3>
+        <p>Defina sua meta de vendas e acompanhe a barra de progresso. Mostra disponíveis, reservados, vendidos, visitas do mês, propostas e negócios fechados.</p>
+      </div>
+      <div class="cart">
+        <span class="cart-ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.7-7-10a7 7 0 0 1 14 0c0 5.3-7 10-7 10z"/><circle cx="12" cy="11" r="2.6"/></svg></span>
+        <h3>De onde vêm seus imóveis</h3>
+        <p>Registre se o imóvel veio de placa, indicação, imobiliária, Instagram ou outro caminho — e veja no relatório qual origem realmente traz captação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DETALHES ══════════ -->
+<section class="secao">
+  <div class="env">
+    <div class="secao-topo">
       <span class="olho olho-azul">Os detalhes que fazem diferença</span>
       <h2>Pensado por quem já perdeu negócio por bobagem.</h2>
     </div>
@@ -839,6 +987,11 @@ p{max-width:64ch}
         <span class="cart-ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8 8 0 0 1-11.9 7L3 20.5l2.1-6A8 8 0 1 1 21 11.5z"/></svg></span>
         <h3>Envia o imóvel pronto no WhatsApp</h3>
         <p>Descrição completa, as fotos escolhidas, o vídeo e o seu cartão de CRECI — tudo em um envio só, pelo compartilhamento do próprio celular.</p>
+      </div>
+      <div class="cart">
+        <span class="cart-ic"><svg viewBox="0 0 24 24"><circle cx="7" cy="12" r="2.6"/><circle cx="17" cy="12" r="2.6"/><path d="M9.6 12h4.8"/></svg></span>
+        <h3>Situação de cada imóvel</h3>
+        <p>Disponível, reservado ou vendido. A carteira sempre reflete a realidade, e os vendidos alimentam sozinhos a sua meta do período.</p>
       </div>
       <div class="cart">
         <span class="cart-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span>
@@ -859,11 +1012,6 @@ p{max-width:64ch}
         <span class="cart-ic"><svg viewBox="0 0 24 24"><path d="M4 7V5.5A1.5 1.5 0 0 1 5.5 4H9M15 4h3.5A1.5 1.5 0 0 1 20 5.5V7M20 17v1.5a1.5 1.5 0 0 1-1.5 1.5H15M9 20H5.5A1.5 1.5 0 0 1 4 18.5V17"/><path d="M8 12h8"/></svg></span>
         <h3>Letra do tamanho que você enxerga</h3>
         <p>Aumenta ou diminui o app inteiro, de 80% a 170%, e fica salvo. Vale para todas as telas — sem apertar os olhos no sol.</p>
-      </div>
-      <div class="cart">
-        <span class="cart-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.4a2.9 2.9 0 0 1 5.6 1c0 1.9-2.8 2.9-2.8 2.9"/><path d="M12 17.2h.01"/></svg></span>
-        <h3>Tutorial dentro do app</h3>
-        <p>Telas de ajuda explicando cada parte, para consultar quando bater a dúvida. Nada de manual em PDF que ninguém abre.</p>
       </div>
     </div>
   </div>
@@ -918,7 +1066,7 @@ p{max-width:64ch}
           <li><svg viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></svg>Backup e restauração incluídos</li>
           <li><svg viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></svg>Acabou o período gratuito? Nada é apagado</li>
         </ul>
-        <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" class="bt bt-vazado">Começar gratuitamente</a>
+        <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" data-gc-event="comecar-gratuitamente" data-gc-title="Clique: Comecar gratuitamente" class="bt bt-vazado">Começar gratuitamente</a>
       </div>
 
       <div class="plano destaque">
@@ -934,7 +1082,7 @@ p{max-width:64ch}
           <li><svg viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></svg>Suporte direto com quem fez o app</li>
           <li><svg viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></svg>Sem fidelidade e sem taxa de cancelamento</li>
         </ul>
-        <a href="https://wa.me/5515998293087?text=Ol%C3%A1%21%20Quero%20assinar%20o%20Corretor%20de%20Im%C3%B3veis%20Pro." target="_blank" rel="noopener" class="bt bt-principal">Assinar pelo WhatsApp</a>
+        <a href="https://wa.me/5515998293087?text=Ol%C3%A1%21%20Quero%20assinar%20o%20Cor%20Sync%20Im%C3%B3veis%20Pro." target="_blank" rel="noopener" data-gc-event="assinar-whatsapp" data-gc-title="Clique: Assinar pelo WhatsApp" class="bt bt-principal">Assinar pelo WhatsApp</a>
       </div>
     </div>
   </div>
@@ -964,6 +1112,18 @@ p{max-width:64ch}
         <div class="resp">Casa, apartamento, chácara/sítio e terreno. Cada tipo tem seu próprio passo a passo, com as perguntas que fazem sentido para ele — terreno não pergunta sobre garagem, apartamento não pergunta sobre poço, e assim por diante. O código do imóvel é gerado sozinho, com a sigla do tipo.</div>
       </details>
       <details>
+        <summary>Dá para guardar o que cada cliente está procurando?</summary>
+        <div class="resp">Sim, e é uma das partes mais úteis. Você registra o tipo de imóvel, a cidade, o mínimo de quartos e a faixa de investimento de cada comprador. Na Consulta ideal, o app cruza isso com a sua carteira e mostra quais imóveis atendem — dá para responder o cliente ainda no telefone. Cada cliente fica num estágio do funil: Novo, Qualificado, Visitou, Proposta ou Fechado.</div>
+      </details>
+      <details>
+        <summary>Consigo mandar vários imóveis de uma vez?</summary>
+        <div class="resp">Consegue, pelo Catálogo. Você marca os imóveis que quer, o app monta uma vitrine em PDF com fotos e valores, e envia pelo WhatsApp ou e-mail num arquivo só. Para um imóvel específico, existe também a Ficha, que gera a página completa daquele imóvel para imprimir ou salvar em PDF.</div>
+      </details>
+      <details>
+        <summary>O simulador de financiamento calcula do jeito dos bancos?</summary>
+        <div class="resp">Ele usa as duas tabelas do mercado: PRICE, com parcela fixa, e SAC, com parcela decrescente. Você informa o valor do imóvel, a entrada, os juros e o prazo, e ele mostra a parcela, o total pago e quanto disso é juros. Serve para dar uma noção ao cliente na hora da visita — a condição final é sempre a que o banco aprovar.</div>
+      </details>
+      <details>
         <summary>O que acontece quando os 30 dias acabam?</summary>
         <div class="resp">Nada é apagado. Seus imóveis, proprietários, agenda e lançamentos continuam gravados no aparelho. Você segue conseguindo consultar o que já cadastrou; para voltar a cadastrar e lançar sem limite, é só ativar o Pro.</div>
       </details>
@@ -989,8 +1149,8 @@ p{max-width:64ch}
     <h2>Comece hoje a próxima visita organizado.</h2>
     <p>Instala em dois minutos, funciona sem internet e não pede cartão. Se não servir para você, é só desinstalar.</p>
     <div class="cta-acoes">
-      <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" class="bt bt-claro">30 dias gratuito</a>
-      <a href="https://wa.me/5515998293087?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20app%20Corretor%20de%20Im%C3%B3veis." target="_blank" rel="noopener" class="bt bt-zap">
+      <a href="https://app.corsyncimoveis.com.br/" target="_blank" rel="noopener" data-gc-event="cta-30dias-final" data-gc-title="Clique: 30 dias gratuito (rodape)" class="bt bt-claro">30 dias gratuito</a>
+      <a href="https://wa.me/5515998293087?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20app%20Cor%20Sync%20Im%C3%B3veis." target="_blank" rel="noopener" data-gc-event="falar-whatsapp" data-gc-title="Clique: Falar com a gente" class="bt bt-zap">
         <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" style="stroke:#fff"><path d="M21 11.5a8 8 0 0 1-11.9 7L3 20.5l2.1-6A8 8 0 1 1 21 11.5z"/></svg>
         Falar com a gente
       </a>
@@ -1008,9 +1168,9 @@ p{max-width:64ch}
           <span class="marca-icone" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg>
           </span>
-          Corretor <span>de Imóveis</span>
+          Cor Sync <span>Imóveis</span>
         </div>
-        <p>O caderno de campo digital do corretor autônomo. Funciona offline, no seu celular, com os seus dados sob o seu controle.</p>
+        <p>O caderno de campo digital do corretor autônomo. Imóveis, clientes, agenda e financeiro — offline, no seu celular, com os seus dados sob o seu controle.</p>
       </div>
       <div>
         <h4>O app</h4>
@@ -1027,13 +1187,13 @@ p{max-width:64ch}
           <li><a href="#perguntas">Perguntas frequentes</a></li>
           <li><a href="#">Como instalar</a></li>
           <li><a href="#">Como fazer backup</a></li>
-          <li><a href="https://wa.me/5515998293087?text=Ol%C3%A1%21%20Preciso%20de%20suporte%20no%20Corretor%20de%20Im%C3%B3veis." target="_blank" rel="noopener">Suporte no WhatsApp</a></li>
+          <li><a href="https://wa.me/5515998293087?text=Ol%C3%A1%21%20Preciso%20de%20suporte%20no%20Cor%20Sync%20Im%C3%B3veis." target="_blank" rel="noopener" data-gc-event="suporte-whatsapp" data-gc-title="Clique: Suporte no WhatsApp (rodape)">Suporte no WhatsApp</a></li>
         </ul>
       </div>
       <div>
         <h4>Contato</h4>
         <ul>
-          <li><a href="https://wa.me/5515998293087?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20app%20Corretor%20de%20Im%C3%B3veis." target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://wa.me/5515998293087?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20app%20Cor%20Sync%20Im%C3%B3veis." target="_blank" rel="noopener">WhatsApp</a></li>
           <li><a href="#">E-mail</a></li>
           <li><a href="#">Termos de uso</a></li>
           <li><a href="#">Privacidade</a></li>
@@ -1041,7 +1201,7 @@ p{max-width:64ch}
       </div>
     </div>
     <div class="rodape-fim">
-      <span>© 2026 Corretor de Imóveis. Todos os direitos reservados.</span>
+      <span>© 2026 Cor Sync Imóveis. Todos os direitos reservados.</span>
       <span>Feito no Brasil, para corretores brasileiros.</span>
     </div>
   </div>
@@ -1073,6 +1233,23 @@ window.addEventListener('scroll', function(){
     tick = false;
   });
 }, {passive:true});
+// ═══ GoatCounter: cliques nos botões ═══
+document.addEventListener('click', function(e){
+  var alvo = e.target;
+  if(!alvo || typeof alvo.closest !== 'function') return;
+  var el = alvo.closest('[data-gc-event]');
+  if(!el) return;
+  if(!(window.goatcounter && typeof window.goatcounter.count === 'function')) return;
+  window.goatcounter.count({
+    path:  el.getAttribute('data-gc-event'),
+    title: el.getAttribute('data-gc-title') || el.getAttribute('data-gc-event'),
+    event: true
+  });
+});
 </script>
+
+<!-- GoatCounter: contagem de visualizações -->
+<script data-goatcounter="https://corsyncimoveis.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
